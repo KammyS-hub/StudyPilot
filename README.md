@@ -1,8 +1,8 @@
-# 🚀 StudyPilot AI
+# StudyPilot AI
 
 StudyPilot AI is an AI-powered academic assistant that helps students create personalized study plans, identify learning gaps, and receive intelligent recommendations based on their academic goals.
 
-## eatures
+## Features
 
 * Personalized Study Plan Generation
 * NLP-Based Goal Analysis
