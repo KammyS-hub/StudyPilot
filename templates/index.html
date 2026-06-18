@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>StudyPilot AI</title>
+
+
+<style>
+
+    body{
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg,#667eea,#764ba2);
+        margin:0;
+        padding:0;
+    }
+
+    .container{
+        width:80%;
+        max-width:900px;
+        margin:40px auto;
+        background:white;
+        padding:30px;
+        border-radius:20px;
+        box-shadow:0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1{
+        text-align:center;
+        color:#333;
+    }
+
+    .subtitle{
+        text-align:center;
+        color:gray;
+        margin-bottom:30px;
+    }
+
+    input{
+        width:75%;
+        padding:12px;
+        border-radius:10px;
+        border:1px solid #ccc;
+    }
+
+    button{
+        padding:12px 20px;
+        border:none;
+        border-radius:10px;
+        cursor:pointer;
+        background:#667eea;
+        color:white;
+        font-weight:bold;
+    }
+
+    button:hover{
+        background:#5563d6;
+    }
+
+    .card{
+        margin-top:20px;
+        padding:20px;
+        border-radius:15px;
+        background:#f5f7ff;
+    }
+
+    ul{
+        padding-left:20px;
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<h1>📚 StudyPilot AI</h1>
+
+<p class="subtitle">
+    Your AI-powered study planning assistant
+</p>
+
+<form method="POST">
+
+    <input
+    type="text"
+    name="goal_text"
+    placeholder="Example: Learn DSA for placements"
+    required>
+
+    <button type="submit">
+        Generate Plan
+    </button>
+
+</form>
+
+{% if analysis %}
+
+<div class="card">
+
+    <h2>🧠 Analysis</h2>
+
+    <p><b>Topic:</b> {{ topic }}</p>
+
+    <p><b>Intent:</b> {{ intent }}</p>
+
+</div>
+
+<div class="card">
+
+    <h2>📅 Study Plan</h2>
+
+    <ul>
+
+    {% for item in plan %}
+
+        <li>{{ item }}</li>
+
+    {% endfor %}
+
+    </ul>
+
+</div>
+
+<div class="card">
+
+    <h2>🎯 Skill Gap Analysis</h2>
+
+    <h3>Required Skills</h3>
+
+<ul>
+{% for skill in gap.required %}
+    <li>✅ {{ skill }}</li>
+{% endfor %}
+</ul>
+
+<h3>Missing Skills</h3>
+
+<ul>
+{% for skill in gap.missing %}
+    <li>❌ {{ skill }}</li>
+{% endfor %}
+</ul>
+
+</div>
+
+{% endif %}
+
+
+</div>
+
+</body>
+</html>
