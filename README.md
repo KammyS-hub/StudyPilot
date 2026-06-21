@@ -60,14 +60,6 @@ Learn DSA for placements
 * Dynamic Programming
 * LeetCode Practice Roadmap
 
-## Future Improvements
-
-* User Authentication
-* Progress Tracking Dashboard
-* AI Chat Assistant
-* Resume-Based Learning Recommendations
-* Learning Analytics Visualization
-
 ## Author
 
 Kamakshi Sharma
